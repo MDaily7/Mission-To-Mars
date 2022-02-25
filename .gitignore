@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 # Practice jupyter notebook
 Practice.ipynb
+#Portfolio templates folder
+Portfolio Templates/
