@@ -20,9 +20,9 @@ which is connected to within the app.py file as well.
 	* Mars Facts Table: https://galaxyfacts-mars.com
 	* Hemisphere Images and titles: https://marshemispheres.com/
 * [Jupyter Notebook]() with all scrapes
-*[Scraping Script]() with refactored scrapes
-*[Flask app script]()
-*[index.html]()
+* [Scraping Script]() with refactored scrapes
+* [Flask app script]()
+* [index.html]()
 
 
     
