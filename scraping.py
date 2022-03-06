@@ -9,8 +9,9 @@ def scrape_all():
     executable_path = {'executable_path':ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=True)
     news_title, news_paragraph = mars_news(browser)
+    hemisphere = hemisphere_data(browser)
     #run scrape functions and store results in dictionary
-    data = {'news_title': news_title, 'news_paragraph': news_paragraph, 'featured_image': featured_image(browser), 'facts': mars_facts(), 'last_modified':dt.datetime.now()}
+    data = {'news_title': news_title, 'news_paragraph': news_paragraph, 'featured_image': featured_image(browser), 'facts': mars_facts(),'hemispheres':hemisphere, 'last_modified':dt.datetime.now()}
     #quit the browser and return the dictionary
     browser.quit()
     return data
@@ -64,7 +65,23 @@ def mars_facts():
     return mars_facts_df.to_html(classes='table table-striped')
 if __name__ =='__main__':
     print(scrape_all())
-
+def hemisphere_data(browser):
+    url = 'https://marshemispheres.com/'
+    browser.visit(url)
+    hemisphere_image_urls = []
+    try:
+        for i in range(0,4):
+            hemispheres = {}
+            browser.find_by_css('div[class="description"] a')[i].click()
+            html=browser.html
+            image_soup=soup(html, 'html.parser')
+            hemispheres['title']=image_soup.find('h2', class_='title').get_text()
+            hemispheres['img_url']=browser.find_by_css('li a')['href']
+            browser.back()
+            hemisphere_image_urls.append(hemispheres)
+    except:
+        return None
+    return hemisphere_image_urls
 
 
 

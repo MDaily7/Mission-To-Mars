@@ -131,3 +131,5 @@ dmypy.json
 Practice.ipynb
 #Portfolio templates folder
 Portfolio Templates/
+#static folder
+static/
