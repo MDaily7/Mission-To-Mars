@@ -19,10 +19,10 @@ which is connected to within the app.py file as well.
 	* Featured Image: https://spaceimages-mars.com
 	* Mars Facts Table: https://galaxyfacts-mars.com
 	* Hemisphere Images and titles: https://marshemispheres.com/
-* [Jupyter Notebook]() with all scrapes
-* [Scraping Script]() with refactored scrapes
-* [Flask app script]()
-* [index.html]()
+* [Jupyter Notebook](https://github.com/MDaily7/Mission-To-Mars/blob/main/Mission_to_Mars_Challenge.ipynb) with all scrapes
+* [Scraping Script](https://github.com/MDaily7/Mission-To-Mars/blob/main/scraping.py) with refactored scrapes
+* [Flask app script](https://github.com/MDaily7/Mission-To-Mars/blob/main/app.py)
+* [index.html](https://github.com/MDaily7/Mission-To-Mars/blob/main/templates/index.html)
 
 
     
